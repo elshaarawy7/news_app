@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/widgets/catagry.dart';
+import 'package:news_app/widgets/custemCarogryCard.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
@@ -28,32 +28,14 @@ class Homepage extends StatelessWidget {
         ), 
       ), 
 
-        body:  Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16 , vertical: 100), 
-          child: Column(
-            children: [
-                Row(
-                  children: [
-
-                    CatagryCard(
-                      imag: "image/3bb37cd5-2869-41f4-886c-ef7bbd7bf4a9.jpg", 
-                      text: "seience", 
-                      onTap: (){
-                        
-                      } ,
-                      ),
-
-                      SizedBox(width: 10,),
-                      CatagryCard(
-                      imag: "image/3bb37cd5-2869-41f4-886c-ef7bbd7bf4a9.jpg", 
-                      text: "seience", 
-                      onTap: (){
-                        
-                      } ,
-                      ),
-                  ],
-                )
-            ],
+        body:SingleChildScrollView(
+          child: const  Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16 , vertical: 100), 
+            child: Column(
+              children: [
+                  Custemcarogrycard()
+              ],
+            ),
           ),
         ),
     );

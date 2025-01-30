@@ -19,20 +19,36 @@ class CatagryCard extends StatelessWidget {
         width: 175, 
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-           color: Colors.black.withOpacity(0.6),
           image: DecorationImage(
             image: AssetImage(imag),
             fit: BoxFit.cover
           ) ,
         ), 
-        child: Text(text , style: const TextStyle(
-          color: Colors.white , 
-          fontWeight: FontWeight.bold ,
-          fontSize: 20 ,
-        ), 
-        textAlign: TextAlign.center,
-        ),
+        child: Stack(
+        children: [
+          // طبقة شبه شفافة
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.black.withOpacity(0.6),
+              borderRadius: BorderRadius.circular(10),
+            ),
+          ),
+          // النص فوق الطبقة
+          Center(
+            child: Text(
+              text,
+              style: const TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ),
+        ]
       ),
+      
+    ),
     );
   }
 }
