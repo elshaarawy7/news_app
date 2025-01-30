@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:news_app/widgets/catagry.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
@@ -27,11 +28,18 @@ class Homepage extends StatelessWidget {
         ), 
       ), 
 
-        body: const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 16 , vertical: 100), 
+        body:  Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16 , vertical: 100), 
           child: Column(
             children: [
-                
+                CatagryCard(
+                  imag: "image/3bb37cd5-2869-41f4-886c-ef7bbd7bf4a9.jpg", 
+                  text: "seience", 
+                  onTap: (){
+                    
+                  } ,
+                  
+                  )
             ],
           ),
         ),

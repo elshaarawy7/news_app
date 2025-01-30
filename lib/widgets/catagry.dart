@@ -15,20 +15,23 @@ class CatagryCard extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        height: 150,
-        width: 250, 
+        height: 120 ,
+        width: 175, 
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(75),
-          color: Colors.black.withOpacity(0.6),
+          borderRadius: BorderRadius.circular(10),
+           color: Colors.black.withOpacity(0.6),
           image: DecorationImage(
             image: AssetImage(imag),
+            fit: BoxFit.cover
           ) ,
         ), 
         child: Text(text , style: const TextStyle(
           color: Colors.white , 
           fontWeight: FontWeight.bold ,
           fontSize: 20 ,
-        ),),
+        ), 
+        textAlign: TextAlign.center,
+        ),
       ),
     );
   }
