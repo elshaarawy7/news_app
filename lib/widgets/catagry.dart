@@ -14,6 +14,22 @@ class CatagryCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
+      child: Container(
+        height: 150,
+        width: 250, 
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(75),
+          color: Colors.black.withOpacity(0.6),
+          image: DecorationImage(
+            image: AssetImage(imag),
+          ) ,
+        ), 
+        child: Text(text , style: const TextStyle(
+          color: Colors.white , 
+          fontWeight: FontWeight.bold ,
+          fontSize: 20 ,
+        ),),
+      ),
     );
   }
 }
