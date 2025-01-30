@@ -32,14 +32,27 @@ class Homepage extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 16 , vertical: 100), 
           child: Column(
             children: [
-                CatagryCard(
-                  imag: "image/3bb37cd5-2869-41f4-886c-ef7bbd7bf4a9.jpg", 
-                  text: "seience", 
-                  onTap: (){
-                    
-                  } ,
-                  
-                  )
+                Row(
+                  children: [
+
+                    CatagryCard(
+                      imag: "image/3bb37cd5-2869-41f4-886c-ef7bbd7bf4a9.jpg", 
+                      text: "seience", 
+                      onTap: (){
+                        
+                      } ,
+                      ),
+
+                      SizedBox(width: 10,),
+                      CatagryCard(
+                      imag: "image/3bb37cd5-2869-41f4-886c-ef7bbd7bf4a9.jpg", 
+                      text: "seience", 
+                      onTap: (){
+                        
+                      } ,
+                      ),
+                  ],
+                )
             ],
           ),
         ),
