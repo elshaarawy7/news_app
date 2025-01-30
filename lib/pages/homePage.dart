@@ -24,8 +24,17 @@ class Homepage extends StatelessWidget {
               fontWeight: FontWeight.bold ,
             ),)
           ],
+        ), 
+      ), 
+
+        body: const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 16 , vertical: 100), 
+          child: Column(
+            children: [
+                
+            ],
+          ),
         ),
-      ),
     );
   }
 }
